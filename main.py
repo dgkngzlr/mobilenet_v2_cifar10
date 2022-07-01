@@ -42,6 +42,9 @@ if device == "cpu":
 else:
     summary(model, (3, 224, 224))
 
+# Shows architecture
+# exit(-1)
+
 train_model(device, model, lr=0.05, epochs=150, train_loader=train_loader, val_loader=val_loader, en_schedular=True)
 torch.save(model.state_dict(), "MobileNet_v2_cifar10_frozen.pth")
 
